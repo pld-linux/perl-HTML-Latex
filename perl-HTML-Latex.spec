@@ -8,14 +8,14 @@ Summary:	HTML::Latex - Creates a Latex file from an HTML file
 Summary(pl):	Modu³ HTML::Latex - tworz±cy plik LaTeX z pliku HTML
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 %{?_with_tests:BuildRequires:	perl-HTML-Tree }
 %{?_with_tests:BuildRequires:	perl-XML-Simple >= 1.04}
-BuildRequires:	rpm-perlprov >= 3.0.3-26
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +36,8 @@ jakikolwiek inny konwerter html2latex.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{?_with_tests:%{__make} test}
@@ -52,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README TODO
-%{perl_sitelib}/%{pdir}/*.pm
+%{perl_vendorlib}/%{pdir}/*.pm
 %{_mandir}/man3/*
