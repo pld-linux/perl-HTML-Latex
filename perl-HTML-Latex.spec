@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _with_tests - perform "make test" (failed on my machine)
+%bcond_with	tests	# perform "make test" (failed on my machine)
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	Latex
@@ -14,8 +15,10 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b15c98fe9105340060e55e11c17747cb
 BuildRequires:	perl-devel >= 5.6
-%{?_with_tests:BuildRequires:	perl-HTML-Tree }
-%{?_with_tests:BuildRequires:	perl-XML-Simple >= 1.04}
+%if %{with tests}
+BuildRequires:	perl-HTML-Tree
+BuildRequires:	perl-XML-Simple >= 1.04
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,7 +44,7 @@ jakikolwiek inny konwerter html2latex.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
