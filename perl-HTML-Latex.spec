@@ -8,7 +8,7 @@ Summary:	HTML::Latex - Creates a Latex file from an HTML file
 Summary(pl):	Modu³ HTML::Latex - tworz±cy plik LaTeX z pliku HTML
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
