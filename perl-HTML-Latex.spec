@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	Latex
-Summary:	HTML::Latex - Creates a Latex file from an HTML file
-Summary(pl):	Modu³ HTML::Latex - tworz±cy plik LaTeX z pliku HTML
+Summary:	HTML::Latex Perl module - creates a LaTeX file from an HTML file
+Summary(pl):	Modu³ Perla HTML::Latex - tworzenie pliku w LaTeXu z pliku HTML
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.0
 Release:	3
