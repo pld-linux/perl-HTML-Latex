@@ -7,7 +7,7 @@
 %define	pnam	Latex
 Summary:	HTML::Latex Perl module - creates a LaTeX file from an HTML file
 Summary(pl):	Modu³ Perla HTML::Latex - tworzenie pliku w LaTeXu z pliku HTML
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-HTML-Latex
 Version:	1.0
 Release:	4
 License:	GPL
