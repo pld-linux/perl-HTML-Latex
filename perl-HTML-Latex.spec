@@ -6,7 +6,7 @@
 %define		pdir	HTML
 %define		pnam	Latex
 Summary:	HTML::Latex Perl module - creates a LaTeX file from an HTML file
-Summary(pl):	Modu≥ Perla HTML::Latex - tworzenie pliku w LaTeXu z pliku HTML
+Summary(pl.UTF-8):   Modu≈Ç Perla HTML::Latex - tworzenie pliku w LaTeXu z pliku HTML
 Name:		perl-HTML-Latex
 Version:	1.0
 Release:	5
@@ -29,11 +29,11 @@ LaTeX. It offers several options in processing, such a the ignoring of
 tags, the configuration of the TeX, and downloading of URLs. It is
 also much easier to extend than any other html2latex converter.
 
-%description -l pl
-Modu≥ ten konwertuje odpowiednio sformatowane pliki HTML, uchwyty
-plikÛw lub ≥aÒcuchy znakÛw do LaTeXa. Oferuje przy przetwarzaniu kilka
-opcji, takich jak ignorowanie znacznikÛw, konfiguracja TeXa oraz
-∂ci±ganie odno∂nikÛw. Jest duøo prostszy do rozbudowywania niø
+%description -l pl.UTF-8
+Modu≈Ç ten konwertuje odpowiednio sformatowane pliki HTML, uchwyty
+plik√≥w lub ≈Ça≈Ñcuchy znak√≥w do LaTeXa. Oferuje przy przetwarzaniu kilka
+opcji, takich jak ignorowanie znacznik√≥w, konfiguracja TeXa oraz
+≈õciƒÖganie odno≈õnik√≥w. Jest du≈ºo prostszy do rozbudowywania ni≈º
 jakikolwiek inny konwerter html2latex.
 
 %prep
