@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test" (failed on my machine)
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	HTML
 %define		pnam	Latex
+%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::Latex Perl module - creates a LaTeX file from an HTML file
 Summary(pl.UTF-8):	Moduł Perla HTML::Latex - tworzenie pliku w LaTeXu z pliku HTML
 Name:		perl-HTML-Latex
@@ -14,12 +14,13 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b15c98fe9105340060e55e11c17747cb
+URL:		http://search.cpan.org/dist/HTML-Latex/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-HTML-Tree
 BuildRequires:	perl-XML-Simple >= 1.04
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
